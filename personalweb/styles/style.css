@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: rgb(0, 0, 0);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: rgb(72, 70, 70);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* buttons */
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid rgba(117, 116, 116, 0.262);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* title */
+.section-tittle {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pretittle {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: rgb(72, 70, 70);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pretittle::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  display: block;
+  left: 0%;
+  top: 50%;
+}
+
+/* layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* logo and navigation menu */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: rgb(18, 18, 49);
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: rgb(18, 18, 49);
+}
+
+/* responsive */
+.rspnsive div {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.rspnsive {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* hero section */
+#hero {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+  color: aqua;
+}
+
+.hero-right img {
+  width: 85%;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50px);
+}
+
+/* service section */
+#services {
+  background-color: rgb(234, 233, 233);
+  padding: 6rem 0;
+  text-align: center; /* Menyamakan teks ke tengah */
+}
+
+.services .pre-tittle {
+  margin: 0 auto;
+}
+
+.services-tittle {
+  text-align: center;
+}
+
+.service {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  border-radius: 4%;
+}
+
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.services-icon {
+  background: rgba(45, 2, 72, 0.229);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.services-icon svg {
+  fill: rgb(45, 2, 72);
+}
+
+/* portfolio section */
+#portfolios {
+  padding: 6rem 0;
+}
+
+.portfolio {
+  border-radius: 4%;
+  overflow: hidden;
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.portfolio-cover {
+  height: 250px;
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 2rem 1.5rem;
+}
+
+.portfolio-tittle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio-h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.portfolio-tittle a svg :hover {
+  fill: rgba(45, 2, 72, 0.229);
+  transition: 0.2s ease-in-out;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.portfolio-tags div {
+  font-size: 0.9rem;
+  border: 1px solid rgb(240, 240, 240);
+  padding: 0.4rem 1rem;
+  color: rgb(84, 81, 81);
+}
+
+/* skills and education */
+#skills {
+  padding: 6rem 0;
+  background: rgb(234, 233, 233);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.education {
+  display: flex;
+  gap: 2rem;
+}
+
+.education .line {
+  padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: rgb(240, 240, 240);
+  position: relative;
+}
+
+.education-info p {
+  margin: 0.6rem0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+
+.education .line div:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+/* contact section */
+#contact {
+  padding: 6rem 0;
+}
+
+.contact-left {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: rgb(234, 233, 233);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input ::placeholder,
+.contact-form textarea ::placeholder {
+  color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: rgb(18, 18, 49);
+  color: #ffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: rgb(44, 44, 85);
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.contact-item-icon {
+  background: rgba(45, 2, 72, 0.229);
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item-icon svg {
+  fill: rgb(45, 2, 72);
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+}
